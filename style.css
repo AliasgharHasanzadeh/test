@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #11071f;
+  font-family: "Playwrite EN", cursive;
+}
+nav {
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #1a0b2e;
+  /* display: none; */
+}
+section {
+  margin: 0 auto;
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* position: relative; */
+}
+.portrait {
+  width: 30%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  > img {
+    /* width: 20%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    &:nth-of-type(2) {
+      width: 190px;
+    }
+    &:nth-of-type(1) {
+      width: 250px;
+    }
+  }
+}
+.typograohy {
+  /* border: 1px solid red; */
+  width: 70%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+  > h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+  > p {
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+}
+.icons {
+  margin-top: 8px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > a {
+    color: #7127ba;
+    text-decoration: none;
+    transition: 0.4s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+article {
+  width: 100%;
+  height: calc(60vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  * {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+/* responsive */
+/* test */
+@media screen and (max-width:650px){
+    section{
+        flex-direction: column;
+        *{
+            width: 100%;
+            text-align: center;
+        }
+        .portrait{
+            position: absolute;left: 70%;transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
